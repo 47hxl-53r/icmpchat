@@ -53,7 +53,7 @@ def listenICMPPackets(own_username):
 
 
 if __name__ == "__main__":
-    destinationIP = "89.39.107.196"
+    destinationIP = "127.0.0.1"
     ownUsername = generateRandomUsername()
     listenerThread = threading.Thread(target=listenICMPPackets, args=(ownUsername,), daemon=True)  # Using a different thread to listen for ICMP packets
     listenerThread.start()
